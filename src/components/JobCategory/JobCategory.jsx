@@ -9,7 +9,7 @@ const JobCategory = () => {
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 my-16'>
                 <div className='mx-auto lg:mx-0'>
-                    <img src="accounts.png" alt="" />
+                    <img className='w-12' src="https://cdn-icons-png.flaticon.com/512/1571/1571035.png" alt="" />
                     <h4 className='text-base font-semibold mt-3'>Account & Finance</h4>
                     <p className='my-10 text-gray-500 text-xs mt-2'>300 Jobs Available</p>
                 </div>

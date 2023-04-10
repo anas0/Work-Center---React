@@ -10,7 +10,7 @@ const FeaturedJobs = () => {
             </div>
             <div className='grid lg:grid-cols-2 my-16 gap-3'>
                 <div className='mx-auto lg:mx-0 bg-slate-50 shadow border border-gray-100 rounded p-5'>
-                    <img src="google.png" alt="" />
+                    <img className='w-40' src="https://cdn-icons-png.flaticon.com/512/5968/5968863.png" alt="" />
                     <h4 className='text-base font-semibold mt-3'>Technical Database Engineer</h4>
                     <p className='mb-3 text-gray-500 text-xs mt-2'>Google LLC</p>
                     <div className='flex gap-2'>
@@ -31,7 +31,7 @@ const FeaturedJobs = () => {
                 </div>
                                 
                 <div className='mx-auto lg:mx-0 bg-slate-50 shadow border border-gray-100 rounded p-5'>
-                    <img src="google.png" alt="" />
+                    <img className='w-40' src="https://cdn-icons-png.flaticon.com/512/5977/5977590.png" alt="" />
                     <h4 className='text-base font-semibold mt-3'>Technical Database Engineer</h4>
                     <p className='mb-3 text-gray-500 text-xs mt-2'>Google LLC</p>
                     <div className='flex gap-2'>
