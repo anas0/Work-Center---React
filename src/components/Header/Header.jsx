@@ -1,10 +1,9 @@
 import React from 'react';
-import './Header.css';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <nav className='mx-20 md:mx-40'>
+        <nav className='mx-20 md:mx-40 py-3'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
