@@ -1,6 +1,5 @@
 import React from 'react';
 import DreamJob from '../DreamJob/DreamJob';
-import JobCategory from '../JobCategory/JobCategory';
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 import JobCategorys from '../JobCategorys/JobCategorys';
 

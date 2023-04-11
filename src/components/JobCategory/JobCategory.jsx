@@ -2,7 +2,7 @@ import React from 'react';
 
 const JobCategory = ({category}) => {
     const {picture, category_name, jobs} = category;
-    console.log(category);
+    //console.log(category);
     
     return (        
         <div className='mx-auto lg:mx-0'>
