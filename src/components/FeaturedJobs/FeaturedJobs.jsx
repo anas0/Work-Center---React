@@ -3,12 +3,20 @@ import FeaturedJob from '../FeaturedJob/FeaturedJob';
 
 const FeaturedJobs = () => {
     const [featuredJobs, setFeaturedJobs] = useState([]);
+    const [showAll, setShowAll] = useState(false);
+    let jobs;
 
     useEffect( ()=>{
         fetch('featured-jobs.json')
             .then(res => res.json())
             .then(data => setFeaturedJobs(data));
     }, []);
+    
+    if(!showAll){
+        jobs = featuredJobs.slice(0, 4);
+    }else{
+        jobs = [...featuredJobs];
+    }
 
     return (
         <div>
@@ -18,13 +26,16 @@ const FeaturedJobs = () => {
             </div>
             <div className='grid lg:grid-cols-2 my-16 gap-3'>
                 {
-                    featuredJobs.map(featuredJob => <FeaturedJob
+                    jobs.map(featuredJob => <FeaturedJob
                         key={featuredJob.id}
                         featuredJob={featuredJob}
                     ></FeaturedJob>)
                 }       
             </div>
 
+            <div className={`text-center py-10 ${showAll && 'hidden'}`}>
+                <a onClick={ ()=> setShowAll(true)} className="btn border-none text-xs font-semibold bg-gradient-to-r from-violet-400 to-violet-600">See All Jobs</a>
+            </div>
         </div>
     );
 };
