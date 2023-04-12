@@ -14,12 +14,19 @@ const Header = () => {
                         <li>
                             <NavLink
                                 to='/'
-                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                className={({ isActive }) => (isActive ? 'active' : 'default')}
                                 >
                                 Home
                             </NavLink>
                         </li>
-                        <li><a>Statistics</a></li>
+                        <li>
+                            <NavLink
+                                to='/statistics'
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                >
+                                Statistics
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink
                                 to='/applied-jobs'
@@ -28,7 +35,14 @@ const Header = () => {
                                 Applied Jobs
                             </NavLink>
                         </li>
-                        <li><a>Blog</a></li>
+                        <li>
+                            <NavLink
+                                to='/blog'
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                >
+                                Blog
+                            </NavLink>
+                        </li>
                     </ul>
                     </div>
                     <p className="font-bold normal-case text-2xl">workCenter</p>
@@ -43,7 +57,14 @@ const Header = () => {
                                 Home
                             </NavLink>
                         </li>
-                        <li><a>Statistics</a></li>
+                        <li>
+                            <NavLink
+                                to='/statistics'
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                >
+                                Statistics
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink
                                 to='/applied-jobs'
@@ -52,7 +73,14 @@ const Header = () => {
                                 Applied Jobs
                             </NavLink>
                         </li>
-                        <li><a>Blog</a></li>
+                        <li>
+                            <NavLink
+                                to='/blog'
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                >
+                                Blog
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
