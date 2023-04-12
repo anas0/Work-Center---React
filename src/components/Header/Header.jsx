@@ -20,7 +20,14 @@ const Header = () => {
                             </NavLink>
                         </li>
                         <li><a>Statistics</a></li>
-                        <li><a>Applied Jobs</a></li>
+                        <li>
+                            <NavLink
+                                to='/applied-jobs'
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                >
+                                Applied Jobs
+                            </NavLink>
+                        </li>
                         <li><a>Blog</a></li>
                     </ul>
                     </div>
@@ -37,7 +44,14 @@ const Header = () => {
                             </NavLink>
                         </li>
                         <li><a>Statistics</a></li>
-                        <li><a>Applied Jobs</a></li>
+                        <li>
+                            <NavLink
+                                to='/applied-jobs'
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                                >
+                                Applied Jobs
+                            </NavLink>
+                        </li>
                         <li><a>Blog</a></li>
                     </ul>
                 </div>

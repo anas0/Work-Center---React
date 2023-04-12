@@ -9,6 +9,7 @@ import {
 import Main from './components/Layout/Main';
 import Home from './components/Home/Home';
 import JobDetails from './components/JobDetails/JobDetails';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,13 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: 'job-details/:id',
+        path: '/job-details/:id',
         element: <JobDetails></JobDetails>,
+        loader: () => fetch('featured-jobs.json')
+      },
+      {
+        path: '/applied-jobs',
+        element: <AppliedJobs></AppliedJobs>,
         loader: () => fetch('featured-jobs.json')
       }
     ]
@@ -29,7 +35,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  
 )

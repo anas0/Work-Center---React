@@ -28,7 +28,6 @@ const JobDetails = () => {
                 return;
             }
             applyJob = [...applied, newApply];
-            console.log('anas');
             localStorage.setItem('apply-job', JSON.stringify(applyJob));
         }
         else{
