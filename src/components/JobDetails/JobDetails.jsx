@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPinIcon, CurrencyDollarIcon, BriefcaseIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import { useLoaderData, useParams } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const JobDetails = () => {
     const {id} = useParams();
@@ -21,6 +22,11 @@ const JobDetails = () => {
         
         if(appliedJob){
             const applied = JSON.parse(appliedJob);
+            const isExist = applied.find(job => job === id);
+            if(isExist){
+                toast('Already applied in this job.')
+                return;
+            }
             applyJob = [...applied, newApply];
             console.log('anas');
             localStorage.setItem('apply-job', JSON.stringify(applyJob));
