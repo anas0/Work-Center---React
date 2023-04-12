@@ -13,6 +13,23 @@ const JobDetails = () => {
     //console.log(featuredJob);
     const {job_description, job_responsibility, educational_requirements, experiences, salary, job_title, phone, email, address} = featuredJob;
 
+    const applyNow = () => {
+        let applyJob = [];
+        const newApply = id;
+
+        const appliedJob = localStorage.getItem('apply-job');
+        
+        if(appliedJob){
+            const applied = JSON.parse(appliedJob);
+            applyJob = [...applied, newApply];
+            console.log('anas');
+            localStorage.setItem('apply-job', JSON.stringify(applyJob));
+        }
+        else{
+            applyJob.push(newApply);
+            localStorage.setItem('apply-job', JSON.stringify(applyJob));
+        }
+    }
     
     return (
         <div className='mt-5'>
