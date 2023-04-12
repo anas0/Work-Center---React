@@ -1,9 +1,9 @@
 import React from 'react';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 const FeaturedJob = ({featuredJob}) => {
     const {id, job_title, company_name, img, job_location, job_type, address, salary} = featuredJob;
-    // console.log(featuredJob);
 
     return (
         <div className='mx-auto lg:mx-0 bg-slate-50 shadow border border-gray-100 rounded p-5'>
@@ -24,7 +24,7 @@ const FeaturedJob = ({featuredJob}) => {
                     <span>Salary : {salary}</span>
                 </p>
             </div>
-            <a className="btn border-none text-xs font-semibold bg-gradient-to-r from-violet-400 to-violet-600">View Details</a>
+            <Link to={`job-details/${id}`} className="btn border-none text-xs font-semibold bg-gradient-to-r from-violet-400 to-violet-600">View Details</Link>
         </div>
     );
 };
