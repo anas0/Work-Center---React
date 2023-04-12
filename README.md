@@ -2,7 +2,7 @@
 Best job hunting platform for job seeker.
 
 ## Live Link
-Hosted in Netlify -> [Link](https://herogadget.netlify.app/)
+Hosted in Netlify -> [Link](https://steady-narwhal-79c039.netlify.app/)
 
 
 ## How it's work
